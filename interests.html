@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+   <head>
+       <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+              <title>Interests</title>  
+
+          <script>
+                function myFunction1() {
+                    var x = document.getElementById("mynav1");
+                        if (x.className === "nav1") {
+                        x.className += " responsive";
+                        } else {
+                            x.className = "nav1"; }
+                }
+
+             </script>
+
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+              rel="stylesheet">
+
+
+            <link rel="stylesheet" href="css/stylesinterests.css"> 
+
+            <link rel="icon" type="image/x-icon" href="images/favicon.png">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+ </head>
+
+ <body>
+           <div class= "container">
+
+        <header> 
+
+                   <div class="logo">
+                 <a href="index.html"> Eoin Brown</a>
+                </div>
+
+                        <nav class="nav1" id="mynav1">
+                              <a href="index.html">Home</a>
+                              <a href="aboutMe.html"> About Me</a>
+                              <a href="modules.html"> Modules</a>
+                              <a href="projects.html">Projects</a>
+                              <a href="skills.html">Skills & Knowledge</a>
+                              <a href="interests.html"> Interests</a>
+                                 <a href="contact.html"> Contact Me </a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction1()" aria-label="Open menu">
+                        <i class="fa fa-bars"></i>
+                        </a>
+                            </nav>
+
+    </header> 
+
+    <main> 
+
+                <div class="heading"> 
+                            <h1 id="topPage"> Interests </h1>
+               </div>
+
+          <div class="grid-container">  	
+
+              <article class="section1-content1">
+                     <div class="card1"> 
+                                <h2> Nature & Wildlife  </h2>
+                              <p> Finding ways to support Nature & Biodiversity. </p>
+                               <p>  Please enjoy below some images taken as part of this effort. </p>
+                       </div>
+                            </article>
+
+        <article class="section1-content2">
+
+        <div class="card1 gallery" id="gallery1">
+          <h2>Trees & Plants</h2>
+          <p>
+            <img src="images/blackthorn.jpg" class="mainImg" alt="">
+          </p>
+          <p class="caption"></p>
+          <p>
+            <a href="#"><img src="images/thumbnails/blackthorn_tb.jpg" class="thumb" alt="Blackthorn" 
+                             data-large="images/blackthorn.jpg"></a>   <!-- This is a personal photo -->
+            <a href="#"><img src="images/thumbnails/willow_tb.jpg" class="thumb" alt="Willow"
+                             data-large="images/willow.jpg"></a>   <!-- This is a personal photo -->
+            <a href="#"><img src="images/thumbnails/wildbramble_tb.jpg" class="thumb" alt="Bramble" 
+                             data-large="images/wildbramble.jpg"></a> <!-- This is a personal photo -->
+            <a href="#"><img src="images/thumbnails/woodviolet_tb.jpg" class="thumb" alt="Wood Violet" 
+                             data-large="images/woodviolet.jpg"></a> <!-- This is a personal photo -->
+            <a href="#"><img src="images/thumbnails/gorse_tb.jpg" class="thumb" alt="Gorse" 
+                             data-large="images/gorse.jpg"></a>  <!-- This is a personal photo -->
+          </p>
+          <p>
+            <a href="#" class="prev">Previous</a> |
+            <a href="#" class="next">Next</a>
+          </p>
+        </div>
+         </article>
+
+        <article class="section2-content2">
+
+        <div class="card1 gallery" id="gallery2">
+          <h2>Pollinators</h2>
+          <p>
+            <img src="images/carderbee.jpg" class="mainImg" alt="">
+          </p>
+          <p class="caption"></p>
+          <p>
+            <a href="#"><img src="images/thumbnails/carderbee_tb.jpg" class="thumb" alt="Carder BumbleBee" 
+                             data-large="images/carderbee.jpg"></a> <!-- This is a personal photo -->
+            <a href="#"><img src="images/thumbnails/caterpillar_tb.jpg" class="thumb" alt="Tiger Moth Caterpillar" 
+                             data-large="images/caterpillar.jpg"></a> <!-- This is a personal photo -->
+            <a href="#"><img src="images/thumbnails/hoverflygo_tb.jpg" class="thumb" alt="Hoverfly" 
+                             data-large="images/hoverflygo.jpg"></a> <!-- This is a personal photo -->
+            <a href="#"><img src="images/thumbnails/solitarybee_tb.jpg" class="thumb" alt="Solitary Bee" 
+                             data-large="images/solitarybee.jpg"></a> <!-- This is a personal photo -->
+            <a href="#"><img src="images/thumbnails/butterfly_tb.jpg" class="thumb" alt=" Speckled Wood Butterfly" 
+                             data-large="images/butterfly.jpg"></a> <!-- This is a personal photo -->
+          </p>
+          <p>
+            <a href="#" class="prev">Previous</a> |
+            <a href="#" class="next">Next</a>
+          </p>
+        </div>
+         </article>
+
+       
+            <script>
+          function setupGallery(galleryId) {
+            const gallery = document.getElementById(galleryId);
+            const thumbnails = gallery.querySelectorAll(".thumb");
+            const mainImg = gallery.querySelector(".mainImg");
+            const caption = gallery.querySelector(".caption");
+            const prevBtn = gallery.querySelector(".prev");
+            const nextBtn = gallery.querySelector(".next");
+            let currentImg = 0;
+
+            function updateGallery(index) {
+              const thumb = thumbnails[index];
+              mainImg.src = thumb.dataset.large;
+              caption.textContent = thumb.alt;
+            }
+
+            thumbnails.forEach((thumb, index) => {
+              thumb.addEventListener("click", function (e) {
+                e.preventDefault();
+                currentImg = index;
+                updateGallery(currentImg);
+              });
+            });
+
+            prevBtn.addEventListener("click", function (e) {
+              e.preventDefault();
+              currentImg = (currentImg - 1 + thumbnails.length) % thumbnails.length;
+              updateGallery(currentImg);
+            });
+
+            nextBtn.addEventListener("click", function (e) {
+              e.preventDefault();
+              currentImg = (currentImg + 1) % thumbnails.length;
+              updateGallery(currentImg);
+            });
+
+            // Initialize with first image
+            updateGallery(currentImg);
+          }
+
+          // Initialize both galleries
+          setupGallery("gallery1");
+          setupGallery("gallery2");
+        </script>
+
+    </div>
+
+    </main>   
+
+    <footer>
+        <a href= "#topPage">Top of Page</a>  
+
+                                      <p>&copy;Eoin Brown. All rights reserved. |
+                             <a href="index.html"> Home</a>
+                            <a href="aboutMe.html"> AboutMe</a>                                     
+                              <a href="modules.html"> Modules</a>
+                              <a href="projects.html">Projects</a>
+                              <a href="skills.html">Skills & Knowledge</a>
+                             <a href="interest.html"> Interests</a>     </p>
+
+        <a href="contact.html" class="button2"> Contact me</a>   
+
+ </footer>
+         
+  </div>      
+ </body>  
+</html>

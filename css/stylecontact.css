@@ -1,0 +1,254 @@
+/*start of base styles */
+
+ /*Below is an example of a group Selector*/
+
+            ol, ul { list-style-type: none;}
+
+          body{background-color: #121212;}
+
+            .container{font-family: "Roboto", Calibri, sans-serif;
+                               margin:auto;  
+                               width:95%;
+            line-height: 1.6;
+            background-color: #121212;
+            color: white;
+         }
+
+                .grid-container img {width: auto; height: auto; object-fit:cover;}
+
+                 img {max-width:100%; height:auto; border-radius: 5px; }
+
+        header {
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1b1b1b;
+         }
+
+         header .logo a  {
+            width: 1em; text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            padding: 2rem;
+
+         }
+
+         .nav1 a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            padding: 2rem;}
+
+         .nav1 a:hover {
+            color:rgba(102, 179, 102, 0.9);
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+          }
+
+            .heading {text-align: center; padding: 0.5em;  font-size: 1.5em;}
+
+             .card1 {padding-top: 1em;}
+
+            .card1 h2 { text-align: center; color: white;}
+
+              .card1 p { font-size:1.25em;
+                    font-weight: 400; text-align: center;}
+
+        .card2 {border-radius: 5px;}
+
+
+        .allform {padding-bottom: 2em;}
+        .allform p {font-size: 1.30rem; padding: 0.25em; padding-left: 0.75em;}
+
+
+        .allform textarea {
+          display: block;
+          margin: 0 auto 1rem auto;
+          width: 95%;
+
+        }
+        .form3 {text-align: right;}
+        .form4 {text-align: center;}
+
+
+         button {
+          padding: 1rem 2rem;
+          font-size: 1.2rem;
+          border-radius: 5px;
+          border: none;
+          background-color: rgba(102, 179, 102, 0.9);
+          color: white;
+          cursor: pointer;
+        }
+
+        button:hover {
+          background-color: #55a355;
+        }
+
+        button:disabled {
+            opacity: 0.4; 
+            cursor: not-allowed;
+          }
+
+        textarea {
+          font-size: 1.5em;  
+        width: 80%;  
+        margin: auto;
+          padding: 0.5em;  
+        border-radius: 5px;
+        resize: none;
+            overflow-y: auto;
+
+        }
+
+        input {
+          padding: 0.5rem;
+          font-size: 1.25rem;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          width: 100%;
+          box-sizing: border-box;
+        }
+
+        .button2 {
+            background-color: rgba(102, 179, 102, 0.9);
+            padding: 0.8rem 2rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+           }
+
+    
+          footer {
+            background-color: #1b1b1b;
+            text-align: center;
+            padding: 1.5rem;
+           }
+
+          footer a {
+            color: #66b366;
+        text-decoration: none;
+        padding: 0.75rem;
+
+          }
+
+
+        #captchaBackground {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #captcha {
+            border: 1px solid #ccc;
+            background-color: #D3D3D3;
+            color: black;
+            margin: 10px 0;
+        }
+
+        #output {
+            margin-top: 10px;
+            font-weight: bold;
+            padding: 0.25em;
+            font-size: 1.5em;
+        }
+
+        .correctCaptcha {
+          color: green;
+        }
+
+        .incorrectCaptcha {
+          color: lightgrey;
+        }
+
+
+ @media only screen and (max-width: 600px)         {
+
+        .grid-container{ display: grid; grid-template-columns:100%; grid-gap: 0.5em; }
+
+        h1{font-size: 1.5em;}
+
+         .nav1 a {display: none;}
+
+                  .nav1 a.icon {
+                    float: right;
+                      display: block; padding: 1em 1.5em;}
+
+            .nav1.responsive {position: relative;}
+
+        .nav1.responsive .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;}
+
+                  .nav1.responsive a {
+                    float: none;
+                    display: block;
+                    text-align: left;}
+
+            h1{font-size: 2em;}
+
+           img {display: none;}   
+
+        }
+
+
+
+         /* end of mobile styles*/
+
+         /* tablet styles*/
+
+ @media only screen and (min-width: 601px)  {
+
+        .grid-container {display: grid; grid-template-columns: repeat(8, 1fr);}
+
+         .nav1 a {display: none;}
+
+                  .nav1 a.icon {
+                    float: right;
+                      display: block; padding: 1em 1.5em;}
+
+                .nav1.responsive {position: relative;}
+
+                  .nav1.responsive .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;}
+
+
+                  .nav1.responsive a {
+                    float: none;
+                    display: block;
+                    text-align: left;}
+
+                    h1 {font-size: 2em;}
+                    .heading {grid-column: 3/9;}
+
+
+             }      
+          /* end of tablet styles*/
+
+
+          /* desktop styles*/
+     @media only screen and (min-width: 992px) {
+
+
+        .nav1 a {display: inline;}
+
+        .nav1 a.icon {display: none;        }  
+
+             .grid-container {display: grid; grid-template-columns: repeat(16, 1fr);  grid-gap: 0.5em;}
+
+
+             h1 {font-size: 2em;}
+           .allform {grid-column: 2/9;}  
+          .section1-content2 {grid-column: 10/16;}
+
+
+        }	 
+
+          /* end of desktop styles*/  
