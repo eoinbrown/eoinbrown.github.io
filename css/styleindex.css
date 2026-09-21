@@ -1,8 +1,8 @@
- /*start of base styles */
+/*start of base styles */
 
- /*Below is an example of a group Selector*/
+/*Below is an example of a group Selector*/
 
-     ol, ul { list-style-type: none;}
+    ol, ul { list-style-type: none;}
 
    body{background-color: #121212;}
 
@@ -30,13 +30,18 @@
             padding: 2rem;
          }
 
+         .nav1 {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+         }
 
          .nav1 a {
                 text-decoration: none;
                 color: #fff;
                 font-size: 1rem;
                 letter-spacing: 1px;
-                padding: 2rem;
+                padding: 1rem 1.5rem;
               }
 
 
@@ -83,6 +88,7 @@
             text-decoration: none;
             border-radius: 4px;
             font-size: 1.2rem;
+            margin: 0.5rem;
          }
 
 
@@ -94,6 +100,7 @@
             text-decoration: none;
             border-radius: 4px;
             font-size: 1.2rem;
+            margin: 0.5rem;
          }
 
            .button3 {
@@ -104,6 +111,11 @@
             text-decoration: none;
             border-radius: 4px;
             font-size: 1.2rem;
+            margin: 0.5rem;
+         }
+
+         .button1:hover, .button2:hover, .button3:hover {
+            background-color: #24292e;
          }
 
 
@@ -139,116 +151,6 @@
               background-color: rgba(102, 179, 102, 0.9);
               color: white;
             }
-
-            .reject-btn {
-              background-color: rgba(102, 179, 102, 0.9);
-              color: white;
-            }
-
-       
-         footer {
-            background-color: #1b1b1b;
-            text-align: center;
-            padding: 1.5rem;
-         }
-
-         footer a {
-            color: #66b366;
-         text-decoration: none;
-         padding: 0.75rem;
-
-         }
-
- @media only screen and (max-width: 600px)  {
-
-         .grid-container{ display: grid; grid-template-columns:100%; grid-gap: 0.5em; }
-            h1{font-size: 1.5em;}
-
-         .nav1 a {display: none;}
-                  .nav1 a.icon {
-                    float: right;
-                      display: block; padding: 1em 1.5em;
-         }
-
-                .nav1.responsive {position: relative;}
-                  .nav1.responsive .icon {
-                    position: absolute;
-                    right: 0;
-                    top: 0;}
-
-
-                  .nav1.responsive a {
-                    float: none;
-                    display: block;
-                    text-align: left;
-                  }
-
-
-         .hero {
-            background: url('../images/bramble.jpg') no-repeat center center/cover;   /* Personal Image */
-            height: 95vh; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-         }
-   }
-
-         /* end of mobile styles*/
-
-         /* tablet styles*/
-
-    @media only screen and (min-width: 601px) {
-                 
-
-.grid-container{display: grid; grid-template-columns: repeat(8, 1fr);  grid-gap: 0.75em;  }
-
-         .nav1 a {display: none;}
-
-                  .nav1 a.icon {
-                    float: right;
-                      display: block; padding: 1em 1.5em;
-         }
-
-                .nav1.responsive {position: relative;}
-                  .nav1.responsive .icon {
-                    position: absolute;
-                    right: 0;
-                    top: 0;}
-
-
-                  .nav1.responsive a {
-                    float: none;
-                    display: block;
-                    text-align: left;
-                  }
-
-             }
-
-
-         /* end of tablet styles*/
-
-          /* desktop styles*/
-@media only screen and (min-width: 992px)            {
-               
-
-
-   .grid-container{display: grid; grid-template-columns: repeat(16, 1fr); grid-gap: 0.5em;}
-
-             .nav1 a {
-            display: inline; }
-
-                     .nav1 a.icon { display: none; }  
-
-                     h1{font-size: 3em;}
-                    .introtext {grid-column: 7/11;}
-
-                .section1-content1 {grid-column: 1/5;}
-                    .section1-content2 {grid-column: 5/9;}
-                    .section1-content3 {grid-column: 9/13;}
-                    .section1-content4 {grid-column: 13/17;}
-
-    }
 
           /* end of desktop styles*/  
 
