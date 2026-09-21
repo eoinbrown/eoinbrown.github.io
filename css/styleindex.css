@@ -76,6 +76,7 @@
          }
 
          .button1 {
+           display: inline-block;
             background-color: rgba(102, 179, 102, 0.9);
             padding: 0.8rem 2rem;
             color: white;
@@ -95,7 +96,7 @@
             font-size: 1.2rem;
          }
 
-           .button2 {
+           .button3 {
             display: inline-block;
             background-color: rgba(102, 179, 102, 0.9);
             padding: 0.8rem 2rem;
